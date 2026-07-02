@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "Bash(findstr \"dev\")",
+      "PowerShell(cmd /c mklink /J \"C:\\\\karo-design\" \"C:\\\\Users\\\\user\\\\Downloads\\\\b_frRAHJuIm8T \\(1\\)\" 2>&1)"
+    ]
+  }
+}
