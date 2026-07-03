@@ -101,8 +101,8 @@ export default function ServicesPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-3">
             <span className="text-foreground">ICÔNES </span>
             <span style={{ color: "#1d7bbf" }}>KARO </span>
-            <span style={{ color: "#d81751" }}>D</span>
-            <span className="text-foreground">ESIGN</span>
+            <span style={{ color: "#d81751" }}>G</span>
+            <span className="text-foreground">RAPHICS</span>
           </h1>
           <div className="flex items-center justify-center gap-3 text-sm sm:text-base font-semibold tracking-widest text-muted-foreground uppercase">
             <span>Design</span>
