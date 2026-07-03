@@ -89,8 +89,8 @@ export function Navbar() {
         scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-background/80 backdrop-blur-sm"
       }`}>
 
-        {/* Top info bar — desktop only with news ticker */}
-        <div className="hidden lg:block bg-[#1d7bbf] text-white overflow-hidden">
+        {/* Top info bar — visible on all devices with news ticker */}
+        <div className="bg-[#1d7bbf] text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-8">
             <div className="py-2 text-sm relative">
               <div className="ticker-container" style={{ overflow: 'hidden', position: 'relative', width: '100%' }}>
@@ -247,7 +247,7 @@ export function Navbar() {
 
       {/* Mobile menu - Always mounted, hidden with translate */}
       <div 
-        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 z-[60] bg-background flex flex-col transition-transform duration-300 ${
+        className={`lg:hidden fixed inset-x-0 top-24 bottom-0 z-[60] bg-background flex flex-col transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -298,10 +298,7 @@ export function Navbar() {
                         key={category.id}
                         href={`/portfolio?category=${encodeURIComponent(category.name)}`}
                         className="flex flex-col items-center gap-1 p-1.5 rounded-lg active:bg-muted transition-colors text-center"
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          closeMobileMenu()
-                        }}
+                        onClick={closeMobileMenu}
                       >
                         <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: `${color}20` }}>
                           <Icon className="w-4 h-4" style={{ color }} />
@@ -312,6 +309,13 @@ export function Navbar() {
                       </Link>
                     )
                   })}
+                  <Link
+                    href="/portfolio"
+                    className="col-span-4 flex items-center justify-center gap-1.5 py-2 px-3 mt-1.5 rounded-lg bg-[#d81751] hover:bg-[#d81751]/90 text-white text-[10px] font-bold text-center transition-colors"
+                    onClick={closeMobileMenu}
+                  >
+                    Voir tout le catalogue
+                  </Link>
                 </div>
               </div>
             </div>
@@ -356,7 +360,7 @@ export function Navbar() {
       </div>
 
       {/* Spacer */}
-      <div className="h-16 lg:h-[132px]" />
+      <div className="h-24 lg:h-[132px]" />
 
       {/* Add keyframes directly in component */}
       <style jsx global>{`

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo, Suspense } from "react"
+import { useState, useMemo, Suspense, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
@@ -54,6 +54,16 @@ function PortfolioContent() {
   const [expanded,            setExpanded]            = useState<string | null>(searchParams.get("category") || null)
   const [drawerOpen,          setDrawerOpen]          = useState(false)
   const [hovered,             setHovered]             = useState<string | null>(null)
+
+  useEffect(() => {
+    const cat = searchParams.get("category") || ""
+    const sub = searchParams.get("subcategory") || ""
+    setSelectedCategory(cat)
+    setSelectedSubcategory(sub)
+    if (cat) {
+      setExpanded(cat)
+    }
+  }, [searchParams])
 
   const filteredProducts = useMemo(() => {
     const out: Array<{ name: string; category: string; subcategory: string; image: string }> = []

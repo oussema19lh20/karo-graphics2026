@@ -99,10 +99,16 @@ export default function ServicesPage() {
       <section className="py-14 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-3">
-            <span className="text-foreground">ICÔNES </span>
             <span style={{ color: "#1d7bbf" }}>KARO </span>
+<<<<<<< HEAD
             <span style={{ color: "#d81751" }}>G</span>
             <span className="text-foreground">RAPHICS</span>
+=======
+            <span>
+              <span style={{ color: "#d81751" }}>G</span>
+              <span className="text-foreground">RAPHICS</span>
+            </span>
+>>>>>>> 5772a52 (Describe your changes)
           </h1>
           <div className="flex items-center justify-center gap-3 text-sm sm:text-base font-semibold tracking-widest text-muted-foreground uppercase">
             <span>Design</span>
